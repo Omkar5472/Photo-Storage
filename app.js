@@ -310,7 +310,7 @@ function displayTranslatedMessage(messageKey) {
 
 document.getElementById('translateButton').addEventListener('click', translatePage);
 function translatePage() {
-    const subscriptionKey = 'ccb6bda9a14643e9b3945a2c74a4566a';
+    const subscriptionKey = '651e08e844914d58bc76b36af6465308';
     const languageSelect = document.getElementById('languageSelect');
     const targetLanguage = languageSelect.value;
 
@@ -328,7 +328,7 @@ function translatePage() {
         headers: {
             'Content-Type': 'application/json',
             'Ocp-Apim-Subscription-Key': subscriptionKey,
-            'Ocp-Apim-Subscription-Region': 'centralus', // Replace with your Azure region code
+            'Ocp-Apim-Subscription-Region': 'centralindia', // Replace with your Azure region code
         },
         body: JSON.stringify(textArray),
     })
