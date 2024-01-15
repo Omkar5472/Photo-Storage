@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Storage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <h1 data-translate>Photo Storage</h1>
+    <main>
+
+        <form id="upload-form">
+            <progress value="0" max="100" class="upload-progress"></progress>
+            <label for="photo" id="select-photos-label" data-translate>Select Photos:</label>
+            <input type="file" id="photo" name="photos[]" multiple accept="image/*">
+            <button type="button" onclick="uploadFiles()" title="Upload Photo" id="upload-btn">Upload</button>
+            <button id="select-all-btn">Select All</button>
+            <button id="delete-btn" disabled title="Delete Selected Photos">Delete Selected Photos</button>
+            <button id="toggle-dark-mode-btn"> Dark Mode</button>
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+            <button id="translateButton">Translate</button>
+        </form>
+        <div id="photos" class="photo-container"></div>
+        <div id="loading-spinner"></div>
+        <div class="modal" id="fullScreenModal">
+            <button class="navigation-btn" id="prevBtn" onclick="navigateFullScreenModal('ArrowLeft')">&#9665;</button>
+            <img id="fullScreenImage" class="modal-content" data-index="0">
+            <button class="navigation-btn" id="nextBtn" onclick="navigateFullScreenModal('ArrowRight')">&#9655;</button>
+            <button class="close-btn" onclick="closeFullScreenModal()">×</button>
+        </div>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+
+    <script src="https://cdn.cognitive.services/azure-cognitiveservices-translator/3.0/cognitiveservices.translator.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
