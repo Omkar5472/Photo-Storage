@@ -8,7 +8,7 @@ The problem statement for the Photo Storage project revolves around the need for
 The Photo Storage project is a web application designed for efficient and user-friendly photo management. Leveraging technologies such as HTML, CSS, JavaScript, Firebase, and Microsoft Azure services, the project enables users to seamlessly upload, view, and delete photos. The platform incorporates a responsive design for diverse devices, integrates cloud-based storage for accessibility, and employs Azure services for scalability and performance optimization. Notable features include real-time language translation using Azure AI services, enhancing the global accessibility of the platform.
 
 # Industry Type :
-Cloud-hosted Web Services
+Lifestyle
 
 # Core Azure Services :
 - Azure App Service (For hosting the website)
